@@ -6,8 +6,8 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-
-document.getElementById("regBtn").addEventListener("click",(event)=> {
+document.addEventListener("DOMContentLoaded", (event) => {
+ document.getElementById("regBtn").addEventListener("click", () => {
     event.preventDefault(); //detiene la acción predeterminada de enviar el formulario.
 
 let nombre = document.getElementById("nombre").value.trim();
@@ -42,4 +42,5 @@ if (!checkbox) {
 //Si todas las validaciones pasan sin errores, se muestra el "showAlertSuccess"
 showAlertSuccess();
 
-})
+});
+    });
